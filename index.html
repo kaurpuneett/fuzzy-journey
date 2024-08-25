@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>YOU SKIN- Your skin, your story.</title>
+</head>
+<body>
+    
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <div class="logo"><img src="img/5.png" alt="logo"></div>
+            <li><a href="home.html">Home </a></li>
+            <li><a href="aboutus.html">About us </a></li>
+            <li><a href="ourproducts.html">Our Products </a></li>
+            <li><a href="register.html">Register Now</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Signup</a></li>
+        </ul>
+    </nav>
+    
+    <section class="background FirstSection">
+        <div class="box-main">
+            <div class="firsthalf">
+                <p class="text-big"><b>"Illuminate Your Skin's Story"</p></b>
+                <p class="text-small">
+                    At <b><i>YOU SKIN</i></b>, we believe that everyone’s skin tells a unique story. Our skincare products are crafted with the finest ingredients to nourish, rejuvenate, and empower your skin, allowing you to feel confident and radiant with every application. Whether you're battling dryness, managing oiliness, or seeking to diminish the signs of aging, our carefully formulated products are designed to address your specific needs. By focusing on holistic skin health, our brand not only enhances your natural beauty but also supports the overall well-being of your skin. Join us on a transformative journey where your skin’s health is restored, revealing a brighter, more vibrant you.
+                </p>
+            </div>
+            <div class="secondhalf">
+                <img src="img/skin.jpg" alt="skin image">
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="paras">
+            <p class="sectionTag text-big">Rhea Fransis</p>
+            <p class="sectionSubtag text-small">The ordering process was seamless, and I appreciated the multiple payment options available. Shipping was lightning-fast, with my package arriving well-packaged and in perfect condition. Plus, their customer service team was incredibly helpful and responsive when I had a question about my order. But what truly sets <b>YouSkin.com</b> apart is the quality of their products. I've been using the skincare items I purchased for a few weeks now, and I can already see a noticeable improvement in my skin's texture and appearance. It's clear that they prioritize using high-quality ingredients that deliver real results.</p>
+        </div>
+        <div class="thumbnail">
+            <img src="img/Brows.jpeg" alt="thumbnail" class="imgFluid">
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="section Left">
+        <div class="paras">
+            <p class="sectionTag text-big">Abigail</p>
+            <p class="sectionSubtag text-small">My experience with <b>YouSkin.com</b> exceeded all expectations! I was on the hunt for effective skincare products, and stumbling upon YouSkin.com was a stroke of luck. Their website is a treasure trove of skincare goodies, offering a wide range of options to suit every skin type and concern. Navigating through their site was a breeze, thanks to its intuitive layout and clear product categorization. I found exactly what I was looking for in no time, and the product descriptions provided comprehensive details about each item, making it easy to make informed choices.</p>
+        </div>
+        <div class="thumbnail">
+            <img src="img/girl.jpeg" alt="thumbnail" class="imgFluid">
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="section">
+        <div class="paras">
+            <p class="sectionTag text-big">Chris Green</p>
+            <p class="sectionSubtag text-small">As a guy who's always been a bit skeptical about skincare, I have to admit, <b>YouSkin.com</b> has completely changed my perspective. I stumbled upon their website while searching for a gift for my wife, and I ended up finding a few products that caught my eye for myself. First off, I have to give props to the website design. It's clean, easy to navigate, and doesn't bombard you with unnecessary clutter. I appreciate simplicity, and <b>YouSkin.com</b> nailed it in that department.</p>
+        </div>
+        <div class="thumbnail">
+            <img src="img/man.jpeg" alt="thumbnail" class="imgFluid">
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Our Products Section -->
+    <section class="section">
+        <h2 class="text-center">Our Products</h2>
+        <div class="products">
+            <div class="product">
+                <h3>Product 1</h3>
+                <p>Description of product 1.</p>
+                <button onclick="addToCart('Product 1')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>Product 2</h3>
+                <p>Description of product 2.</p>
+                <button onclick="addToCart('Product 2')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>Product 3</h3>
+                <p>Description of product 3.</p>
+                <button onclick="addToCart('Product 3')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="section" style="display:none;">
+        <h2 class="text-center">Cart</h2>
+        <div id="cartItems"></div>
+        <button onclick="clearCart()">Clear Cart</button>
+    </section>
+
+    <section class="contact">
+        <h2 class="text-center">Contact Us</h2>
+        <div class="form">
+            <form method="post" id="contactForm">
+                <input class="form-input" type="text" name="name" id="name" placeholder="Enter Your Name">
+                <input class="form-input" type="text" name="phone" id="phone" placeholder="Enter Your Phone Number">
+                <input class="form-input" type="text" name="email" id="email" placeholder="Enter Your Email">
+                <input class="form-input" type="text" name="address" id="address" placeholder="Enter Your Address">
+                <textarea class="form-input" name="text" id="text" cols="30" rows="10" placeholder="Please Tell us Your Concern"></textarea>
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <p class="text-footer">
+        <footer class="background">Copyright &copy;2027 www.YouSkin.com - All Rights Reserved</footer>
+    </p>
+
+    <!-- Login Form -->
+    <div id="loginForm" class="modal">
+        <form class="modal-content" method="post" action="login.php">
+            <div class="container">
+                <h2>Login</h2>
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signupForm" class="modal">
+        <form class="modal-content" method="post" action="signup.php">
+            <div class="container">
+                <h2>Sign Up</h2>
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="scriptt.js"></script>
+
+</body>
+</html>
