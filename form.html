@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contact Us - YOU SKIN</title>
+</head>
+<body>
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <div class="logo"><img src="img/5.png" alt="logo"></div>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="ourproducts.html">Our Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <div class="rightNav">
+                <input type="text" name="Search" id="Search">
+                <button class="btn btn-sm">Search</button>
+            </div>
+        </ul>
+    </nav>
+
+    <section class="contact">
+        <h2 class="text-center">Contact Us</h2>
+        <div class="form">
+            <form action="contact_form_handler.php" method="POST">
+                <input class="form-input" type="text" name="name" id="name" placeholder="Enter Your Name">
+                <input class="form-input" type="text" name="phone" id="phone" placeholder="Enter Your Phone Number">
+                <input class="form-input" type="email" name="email" id="email" placeholder="Enter Your Email">
+                <input class="form-input" type="text" name="address" id="address" placeholder="Enter Your Address">
+                <textarea class="form-input" name="message" id="message" cols="30" rows="10" placeholder="Please Tell us Your Concern"></textarea>
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="background">Copyright &copy;2027 www.YouSkin.com - All Rights Reserved </footer>
+</body>
+</html>

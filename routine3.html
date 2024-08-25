@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Skincare Routine - YouSkin.com</title>
+</head>
+<body>
+    <header>
+        <h1>Build Your Skincare Routine</h1>
+        <p>Customize your skincare routine to match your skin's unique needs.</p>
+    </header>
+
+    <section>
+        <form action="submit_routine.php" method="post">
+            <label for="skin-type">Skin Type:</label>
+            <select id="skin-type" name="skin_type">
+                <option value="dry">Dry</option>
+                <option value="oily">Oily</option>
+                <option value="combination">Combination</option>
+                <option value="normal">Normal</option>
+                <option value="sensitive">Sensitive</option>
+            </select>
+
+            <label for="concerns">Skin Concerns:</label>
+            <select id="concerns" name="skin_concerns[]" multiple>
+                <option value="acne">Acne</option>
+                <option value="wrinkles">Wrinkles</option>
+                <option value="dryness">Dryness</option>
+                <option value="pigmentation">Pigmentation</option>
+                <option value="redness">Redness</option>
+            </select>
+
+            <label>Product Preferences:</label>
+            <input type="checkbox" id="paraben-free" name="preferences[]" value="paraben_free">
+            <label for="paraben-free">Paraben Free</label>
+            <input type="checkbox" id="fragrance-free" name="preferences[]" value="fragrance_free">
+            <label for="fragrance-free">Fragrance Free</label>
+            <input type="checkbox" id="organic" name="preferences[]" value="organic">
+            <label for="organic">Organic</label>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        <p>Thank you for trusting YouSkin.com to build your personal skincare routine!</p>
+    </footer>
+</body>
+</html>

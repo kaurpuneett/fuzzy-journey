@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Routine - YouSkin.com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #fff;
+        }
+        .routine-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="routine-container">
+        <h1>Build Your Skincare Routine</h1>
+        <form id="routineForm">
+            <!-- Interactive elements go here. Example: Skin type, preferences, etc. -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('routineForm').onsubmit = function(event) {
+            event.preventDefault(); // Prevent form submission for demonstration
+            alert('Routine created!'); // Replace this with actual logic.
+        };
+    </script>
+</body>
+</html>

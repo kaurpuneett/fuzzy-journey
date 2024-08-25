@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/products.css"> 
+    <style>
+        /* CSS for cart display */
+        .cart-container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100%;
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+            display: none; /* Initially hide the cart */
+            z-index: 1000; /* Ensure it's above other content */
+        }
+        
+        .cart-container.show {
+            display: block; /* Show the cart when items are added */
+        }
+        
+        .cart-item {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        
+        .cart-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    </style>
+    <title>Our Products - YouSkin.com</title>
+</head>
+<body>
+    <header>
+       
+    </header>
+
+    <section class="products">
+        <div class="product">
+            <img src="img/eds.jpg" alt="Product 1">
+            <h2>EDS</h2>
+            <p>EDS Face Cream</p>
+            <p>Price: $17.00</p>
+            <button onclick="addToCart('Product 1', 10.00)">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <img src="img/laneige.jpg" alt="Product 2">
+            <h2>Laneige</h2>
+            <p>A hydrating overnight treatment designed to deeply moisturize and revitalize the skin while you sleep.</p>
+            <p>Price: $15.00</p>
+            <button onclick="addToCart('Product 2', 15.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="img/ordinary.png" alt="Product 3">
+            <h2>Ordinary</h2>
+            <p>Multi-Peptide Serum for Hair</p>
+            <p>Price: $23.00</p>
+            <button onclick="addToCart('Product 3', 23.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="img/cetaphil.jpg" alt="Product 4">
+            <h2>Cetaphil</h2>
+            <p>Formulated to gently remove dirt, oil, and impurities from the skin, leaving it clean and refreshed.
+            </p>
+            <p>Price: $6.00</p>
+            <button onclick="addToCart('Product 4', 6.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="img/drunk.jpg" alt="Product 5">
+            <h2>Drunk Elephant</h2>
+            <p>Night Serum : A concentrated skincare treatment designed to nourish, repair, and rejuvenate the skin overnight, targeting specific concerns like fine lines, uneven tone, and dullness for a brighter, more youthful complexion by morning.
+            </p>
+            <p>Price: $44.00</p>
+            <button onclick="addToCart('Product 5', 44.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="img/foxtalesun.jpg" alt="Product 6">
+            <h2>Foxtale</h2>
+            <p> Mattifying Sunscreen SPF 70 PA++++ <br> Normal To Oily Skin
+            </p>
+            <p>Price: $12.00</p>
+            <button onclick="addToCart('Product 6', 12.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="img/toner.jpg" alt="Product 7">
+            <h2>Glow Recipe</h2>
+            <p> GLOW RECIPE WATERMELON GLOW PHA + BHA PORE-TIGHT TONER (VARIOUS SIZES) - 150ML
+            </p>
+            <p>Price: $20.00</p>
+            <button onclick="addToCart('Product 7', 20.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="img/rhode.png" alt="Product 8">
+            <h2>RHODE Glazing Milk</h2>
+            <p> Rhode Glazing Milk – The Essential Prep Layer<br>
+                Good for All skin type.<br>
+                Size: 140ml/ 4.7 fl oz
+            </p>
+            <p>Price: $200.00</p>
+            <button onclick="addToCart('Product 8', 200.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="img/hairmistrare.jpg" alt="Product 9">
+            <h2>Rare Beauty</h2>
+            <p> A lightweight, fragrant spray designed to refresh, hydrate, and add a subtle scent to your hair, enhancing shine and manageability without weighing it down.<br>
+                Good for All skin type.<br>
+                Size: 140ml/ 4.7 fl oz
+            </p>
+            <p>Price: $240.00</p>
+            <button onclick="addToCart('Product 9', 240.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="img/rhodecombo.jpg" alt="Product 10">
+            <h2>RHODE - combo of 4</h2>
+            <p>This 4-product skincare combo kit includes a gentle cleanser, rejuvenating toner, nourishing serum, and hydrating moisturizer, expertly curated to provide a comprehensive daily skincare routine that cleanses, balances, revitalizes, and moisturizes for a healthier, more radiant complexion.<br>
+                Size: 140ml/ 4.7 fl oz
+            </p>
+            <p>Price: $300.00</p>
+            <button onclick="addToCart('Product 10', 300.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="img/florencetintedbalm.jpg" alt="Product 11">
+            <h2>Florence By Mills</h2>
+            <p>Oh Whale! Tinted Lip Balm - Moisturizing and Hydrating Vegan Lip Balm with a Sheer Hint of Color
+            </p>
+            <p>Price: $300.00</p>
+            <button onclick="addToCart('Product 11', 300.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="img/florenc2.jpg" alt="Product 12">
+            <h2>Florence By Mills</h2>
+            <p>Oh Whale! Tinted Lip Balm - Moisturizing and Hydrating Vegan Lip Balm with a Sheer Hint of Color<br>Dragonfruit & Grape (Purple), 0.15 oz/ 4.5g
+            </p>
+            <p>Price: $34.00</p>
+            <button onclick="addToCart('Product 12', 34.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="img/celimax.jpeg" alt="Product 13">
+            <h2>Celimax</h2>
+            <p>Noni Energy Ampoule 30ml |<br> with 71.77% Noni Extract, Hydrating, Moisturizing & Soothing Serum for Wrinkles & Fine Lines, Mild Ampoule For Face
+            </p>
+            <p>Price: $16.00</p>
+            <button onclick="addToCart('Product 13', 16.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="img/mengarner.jpg" alt="Product 14">
+            <h2>Garnier </h2>
+            <p>Garnier Men Turbo Bright Double Action Face Wash, Deep Cleansing Anti Pollution Face Wash with Charcoal and Vitamin C, Suitable for all Skin Types, 150g
+            </p>
+            <p>Price: $6.00</p>
+            <button onclick="addToCart('Product 14', 6.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="img/baby.jpg" alt="Product 15">
+            <h2>MamaEarth </h2>
+            <p>Milky Soft Face Cream With Murumuru Butter for Babies<br>
+                 60 ml
+            </p>
+            <p>Price: $2.00</p>
+            <button onclick="addToCart('Product 15', 2.00)">Add to Cart</button>
+        </div>
+   
+   
+    </section>
+
+    <footer>
+        <p class="text-footer">© 2027 YouSkin.com. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to add product to cart
+        function addToCart(productName, price) {
+            // Retrieve existing cart items from localStorage
+            let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // Add the new product to the cart
+            cartItems.push({ name: productName, price: price });
+            
+            // Store the updated cart items back in localStorage
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+            
+            // Alert the user that the product has been added to the cart
+            alert('Product added to cart!');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Quiz - YouSkin.com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #fff;
+        }
+        .quiz-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 8px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Skin Type Quiz</h1>
+        <form id="skinQuizForm">
+            <div class="question">
+                <p>How often does your skin feel oily?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="Always">Always</label><br>
+                    <label><input type="radio" name="q1" value="Sometimes">Sometimes</label><br>
+                    <label><input type="radio" name="q1" value="Rarely">Rarely</label><br>
+                    <label><input type="radio" name="q1" value="Never">Never</label>
+                </div>
+            </div>
+            <!-- More questions here -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('skinQuizForm').onsubmit = function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+            // Here, you would typically handle the form data, possibly sending it to a server or displaying results
+            alert('Thank you for completing the quiz!');
+        };
+    </script>
+</body>
+</html>
